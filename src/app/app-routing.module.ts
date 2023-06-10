@@ -5,7 +5,7 @@ import { DeviceListComponent } from './device-list/device-list.component';
 const routes: Routes = [
   {
     path: 'devices', component: DeviceListComponent },
-  { path: '', redirectTo: 'devices', pathMatch: 'full' }
+  { path: '', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
