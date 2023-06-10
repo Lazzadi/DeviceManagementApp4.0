@@ -8,6 +8,7 @@ import { DeviceDetailsComponent } from './device-details/device-details.componen
 import { DeviceCreateComponent } from './device-create/device-create.component';
 import { DeviceUpdateComponent } from './device-update/device-update.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     DeviceListComponent,
     DeviceDetailsComponent,
     DeviceCreateComponent,
-    DeviceUpdateComponent
+    DeviceUpdateComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
