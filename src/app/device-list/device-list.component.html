@@ -14,7 +14,9 @@
   </thead>
   <tbody>
     <tr *ngFor="let device of devices">
-      <td>{{ device.deviceId }}</td>
+      <td>
+        <a [routerLink]="['/devices', device.deviceId]">{{ device.deviceId }}</a>
+      </td>
       <td>
         <ng-container *ngIf="device.user; else claimDeviceTemplate">
           {{ device.user.name }}

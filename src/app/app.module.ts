@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DeviceDeleteComponent } from './device-delete/device-delete.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     DeviceDetailsComponent,
     DeviceCreateComponent,
     DeviceUpdateComponent,
-    NavigationComponent
+    NavigationComponent,
+    DeviceDeleteComponent
   ],
   imports: [
     BrowserModule,
