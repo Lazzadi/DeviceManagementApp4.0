@@ -3,12 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { DeviceListComponent } from './device-list/device-list.component';
 import { DeviceDetailsComponent } from './device-details/device-details.component';
 import { DeviceCreateComponent } from './device-create/device-create.component';
+import { DeviceUpdateComponent } from './device-update/device-update.component';
 
 
 
 const routes: Routes = [
   { path: 'devices', component: DeviceListComponent },
   { path: 'devices/create', component: DeviceCreateComponent },
+  { path: 'devices/:id/update', component: DeviceUpdateComponent },
   { path: 'devices/:id', component: DeviceDetailsComponent },
   { path: '', redirectTo: '', pathMatch: 'full' }
 ];
