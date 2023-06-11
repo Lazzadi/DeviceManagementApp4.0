@@ -1,4 +1,36 @@
-<p>gasgasdg</p>
-<ul>
-  <li *ngFor="let device of devices">{{ device.name }}</li>
-</ul>
+<table class="table">
+  <thead>
+    <tr>
+      <th>DeviceId</th>
+      <th>User</th>
+      <th>Name</th>
+      <th>Manufacturer</th>
+      <th>Type</th>
+      <th>Operating System</th>
+      <th>OS Version</th>
+      <th>Processor</th>
+      <th>RAM Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let device of devices">
+      <td>{{ device.deviceId }}</td>
+      <td>
+        <ng-container *ngIf="device.user; else claimDeviceTemplate">
+          {{ device.user.name }}
+        </ng-container>
+      </td>
+      <td>{{ device.name }}</td>
+      <td>{{ device.manufacturer }}</td>
+      <td>{{ device.type }}</td>
+      <td>{{ device.operatingSystem }}</td>
+      <td>{{ device.osVersion }}</td>
+      <td>{{ device.processor }}</td>
+      <td>{{ device.ramAmount }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #claimDeviceTemplate>
+  Claim device
+</ng-template>
