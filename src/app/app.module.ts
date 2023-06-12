@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DeviceDeleteComponent } from './device-delete/device-delete.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { UserRegisterComponent } from './user-register/user-register.component';
     DeviceUpdateComponent,
     NavigationComponent,
     DeviceDeleteComponent,
-    UserRegisterComponent
+    UserRegisterComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,
