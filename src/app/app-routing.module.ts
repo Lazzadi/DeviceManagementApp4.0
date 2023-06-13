@@ -7,6 +7,7 @@ import { DeviceUpdateComponent } from './device-update/device-update.component';
 import { DeviceDeleteComponent } from './device-delete/device-delete.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
 import { UserLoginComponent } from './user-login/user-login.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 
 
@@ -18,7 +19,7 @@ const routes: Routes = [
   { path: 'devices/:id', component: DeviceDetailsComponent },
   { path: 'user/register', component: UserRegisterComponent },
   { path: 'user/login', component: UserLoginComponent },
-  { path: '', redirectTo: '', pathMatch: 'full' }
+  { path: '', component: HomePageComponent }
 ];
 
 @NgModule({

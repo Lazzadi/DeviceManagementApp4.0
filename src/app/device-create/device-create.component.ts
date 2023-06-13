@@ -1,6 +1,7 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-device-create',
@@ -17,15 +18,13 @@ export class DeviceCreateComponent {
     this.http.post<any>('https://localhost:7195/api/Device', this.device)
       .subscribe(
         response => {
-
-          this.router.navigate(['/devices']);
+          this.router.navigate(['devices']);
           console.log('Device created successfully:', response);
-          
-
         },
         error => {
           this.error = 'Error creating device.'; // Handle and display the error, if any
         }
       );
   }
+
 }

@@ -1,7 +1,7 @@
 <div class="container">
   <h2>Create New Device</h2>
 
-  <form class="form-group" (ngSubmit)="createDevice()">
+  <form class="form-group" (ngSubmit)="createDevice()" >
     <div class="form-group">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" class="form-control" [(ngModel)]="device.name" required>
@@ -37,8 +37,8 @@
       <input type="number" id="ramAmount" name="ramAmount" class="form-control" [(ngModel)]="device.ramAmount" required>
     </div>
 
-    <button type="submit" class="btn btn-primary">Create Device</button>
+    <button type="submit" class="btn btn-primary">Create Device </button>
+    
   </form>
 </div>
-
 <router-outlet></router-outlet>
