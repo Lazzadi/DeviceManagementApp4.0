@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-device-list',
   templateUrl: './device-list.component.html',
@@ -9,6 +10,8 @@ import { HttpClient } from '@angular/common/http';
 export class DeviceListComponent implements OnInit {
   devices: any[] = []; // Property to hold the list of devices
   error: string = ''; // Property to hold error messages, if any
+
+
 
   constructor(private http: HttpClient) { }
 

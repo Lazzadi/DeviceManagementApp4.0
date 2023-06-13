@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-device-create',
@@ -10,15 +11,17 @@ export class DeviceCreateComponent {
   device: any = {}; // Object to hold the device details
   error: string = ''; // Property to hold error messages, if any
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   createDevice() {
     this.http.post<any>('https://localhost:7195/api/Device', this.device)
       .subscribe(
         response => {
-          // Device created successfully, perform any necessary actions
-          // e.g., show success message, redirect to device list, etc.
+
+          this.router.navigate(['/devices']);
           console.log('Device created successfully:', response);
+          
+
         },
         error => {
           this.error = 'Error creating device.'; // Handle and display the error, if any

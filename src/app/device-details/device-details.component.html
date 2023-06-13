@@ -1,4 +1,4 @@
-<div *ngIf="device">
+<div *ngIf="device" class="container">
   <h2>Device Details</h2>
   <table class="table">
     <tr>
@@ -39,10 +39,9 @@
     </tr>
   </table>
   <button class="btn btn-primary" [routerLink]="['/devices', device.deviceId, 'update']">Update Device</button>
-  <button class="btn btn-primary" [routerLink]="['/devices', device.deviceId, 'delete']">Delete Device</button>
+  <button class="btn btn-primary btn-danger" [routerLink]="['/devices', device.deviceId, 'delete']">Delete Device</button>
 </div>
 
-
-<div *ngIf="error">
+<div *ngIf="error" class="container">
   <p>{{ error }}</p>
 </div>

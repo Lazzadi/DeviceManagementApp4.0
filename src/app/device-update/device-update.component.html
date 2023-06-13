@@ -1,44 +1,46 @@
-<h2>Update Device</h2>
+<div class="container">
+  <h2>Update Device</h2>
 
-<form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" id="name" formControlName="name" required>
-  </div>
+  <form [formGroup]="updateForm" (ngSubmit)="onSubmit()" class="needs-validation">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" formControlName="name" class="form-control" required>
+    </div>
 
-  <div class="form-group">
-    <label for="manufacturer">Manufacturer</label>
-    <input type="text" id="manufacturer" formControlName="manufacturer" required>
-  </div>
+    <div class="form-group">
+      <label for="manufacturer">Manufacturer</label>
+      <input type="text" id="manufacturer" formControlName="manufacturer" class="form-control" required>
+    </div>
 
-  <div class="form-group">
-    <label for="type">Type</label>
-    <input type="text" id="type" formControlName="type" required>
-  </div>
+    <div class="form-group">
+      <label for="type">Type</label>
+      <input type="text" id="type" formControlName="type" class="form-control" required>
+    </div>
 
-  <div class="form-group">
-    <label for="operatingSystem">Operating System</label>
-    <input type="text" id="operatingSystem" formControlName="operatingSystem" required>
-  </div>
+    <div class="form-group">
+      <label for="operatingSystem">Operating System</label>
+      <input type="text" id="operatingSystem" formControlName="operatingSystem" class="form-control" required>
+    </div>
 
-  <div class="form-group">
-    <label for="osVersion">OS Version</label>
-    <input type="text" id="osVersion" formControlName="osVersion" required>
-  </div>
+    <div class="form-group">
+      <label for="osVersion">OS Version</label>
+      <input type="text" id="osVersion" formControlName="osVersion" class="form-control" required>
+    </div>
 
-  <div class="form-group">
-    <label for="processor">Processor</label>
-    <input type="text" id="processor" formControlName="processor" required>
-  </div>
+    <div class="form-group">
+      <label for="processor">Processor</label>
+      <input type="text" id="processor" formControlName="processor" class="form-control" required>
+    </div>
 
-  <div class="form-group">
-    <label for="ramAmount">RAM Amount</label>
-    <input type="number" id="ramAmount" formControlName="ramAmount" required>
-  </div>
+    <div class="form-group">
+      <label for="ramAmount">RAM Amount</label>
+      <input type="number" id="ramAmount" formControlName="ramAmount" class="form-control" required>
+    </div>
 
-  <div class="form-group">
-    <button type="submit" [disabled]="updateForm.invalid">Update Device</button>
-  </div>
-</form>
+    <div class="form-group">
+      <button type="submit" [disabled]="updateForm.invalid" class="btn btn-primary">Update Device</button>
+    </div>
+  </form>
 
-<p *ngIf="error">{{ error }}</p>
+  <p *ngIf="error" class="text-danger">{{ error }}</p>
+</div>

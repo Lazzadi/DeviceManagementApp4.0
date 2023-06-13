@@ -1,38 +1,49 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th>DeviceId</th>
-      <th>User</th>
-      <th>Name</th>
-      <th>Manufacturer</th>
-      <th>Type</th>
-      <th>Operating System</th>
-      <th>OS Version</th>
-      <th>Processor</th>
-      <th>RAM Amount</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let device of devices">
-      <td>
-        <a [routerLink]="['/devices', device.deviceId]">{{ device.deviceId }}</a>
-      </td>
-      <td>
-        <ng-container *ngIf="device.user; else claimDeviceTemplate">
-          {{ device.user.name }}
-        </ng-container>
-      </td>
-      <td>{{ device.name }}</td>
-      <td>{{ device.manufacturer }}</td>
-      <td>{{ device.type }}</td>
-      <td>{{ device.operatingSystem }}</td>
-      <td>{{ device.osVersion }}</td>
-      <td>{{ device.processor }}</td>
-      <td>{{ device.ramAmount }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>DeviceId</th>
+        <th>User</th>
+        <th>Name</th>
+        <th>Manufacturer</th>
+        <th>Type</th>
+        <th>OS</th>
+        <th>OS Version</th>
+        <th>Processor</th>
+        <th>RAM</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let device of devices">
+        <td>
+          <a [routerLink]="['/devices', device.deviceId]">{{ device.deviceId }}</a>
+        </td>
+        <td>
+          <ng-container *ngIf="device.user; else claimDeviceTemplate">
+            {{ device.user.name }}
+          </ng-container>
+        </td>
+        <td>{{ device.name }}</td>
+        <td>{{ device.manufacturer }}</td>
+        <td>{{ device.type }}</td>
+        <td>{{ device.operatingSystem }}</td>
+        <td>{{ device.osVersion }}</td>
+        <td>{{ device.processor }}</td>
+        <td>{{ device.ramAmount }}</td>
+        <td>
+          <button class="btn btn-sm btn-primary" [routerLink]="['/devices', device.deviceId, 'update']">
+            Update
+          </button>
+          <button class="btn btn-sm btn-danger ml-2" [routerLink]="['/devices', device.deviceId, 'delete']">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-<ng-template #claimDeviceTemplate>
-  Claim device
-</ng-template>
+  <ng-template #claimDeviceTemplate>
+    Claim device
+  </ng-template>
+</div>

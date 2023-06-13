@@ -5,12 +5,12 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-device-delete',
   template: `
-    <div>
-      <h2>Confirm Device Deletion</h2>
-      <p>Are you sure you want to delete this device?</p>
-      <button (click)="deleteDevice()">Delete</button>
-      <button (click)="goBack()">Cancel</button>
-    </div>
+    <div class="container">
+  <h2>Confirm Device Deletion</h2>
+  <p>Are you sure you want to delete this device?</p>
+  <button class="btn btn-danger" (click)="deleteDevice()">Delete</button>
+  <button class="btn btn-secondary" (click)="goBack()">Cancel</button>
+  </div>
   `,
 })
 export class DeviceDeleteComponent implements OnInit {

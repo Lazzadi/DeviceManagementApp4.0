@@ -18,16 +18,12 @@ export class UserLoginComponent {
 
   login() {
     try {
-
-      
-
       this.http.post<any>('https://localhost:7195/api/User/login', this.user)
         .subscribe(
           response => {
             console.log('User logged in successfully:', response);
             if (response.Email) {
-              // Handle the successful login, such as storing the user token in local storage
-              // Redirect to the home devices page
+              //token
               this.router.navigate(['devices']);
             } else {
               this.error = 'Invalid email or password.';

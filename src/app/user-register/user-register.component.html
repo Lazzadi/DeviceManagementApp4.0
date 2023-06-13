@@ -1,26 +1,28 @@
-<form (ngSubmit)="userRegister()" id="user-registration-form">
-  <div>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" [(ngModel)]="user.name" required>
-  </div>
-  <div>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" [(ngModel)]="user.email" required>
-  </div>
-  <div>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" [(ngModel)]="user.password" required>
-  </div>
-  <div>
-    <label for="role">Role:</label>
-    <select id="role" name="role" [(ngModel)]="user.role" required>
-      <option value="admin">Admin</option>
-      <option value="user">User</option>
-    </select>
-  </div>
-  <div>
-    <label for="location">Location:</label>
-    <input type="text" id="location" name="location" [(ngModel)]="user.location" required>
-  </div>
-  <button type="submit">Register</button>
-</form>
+<div class="container">
+  <form (ngSubmit)="userRegister()" id="user-registration-form">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" class="form-control" [(ngModel)]="user.name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" class="form-control" [(ngModel)]="user.email" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" class="form-control" [(ngModel)]="user.password" required>
+    </div>
+    <div class="form-group">
+      <label for="role">Role:</label>
+      <select id="role" name="role" class="form-control" [(ngModel)]="user.role" required>
+        <option value="admin">Admin</option>
+        <option value="user">User</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" class="form-control" [(ngModel)]="user.location" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+</div>
