@@ -1,10 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.angular",
     "\\src",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\app\\device-create",
+    "\\src\\app\\device-update",
+    "\\src\\app\\navigation",
+    "\\src\\app\\user-register"
   ],
-  "SelectedNode": "\\.editorconfig",
+  "SelectedNode": "\\src\\app\\device-create\\device-create.component.ts",
   "PreviewInSolutionExplorer": false
 }
