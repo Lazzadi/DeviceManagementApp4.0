@@ -17,12 +17,13 @@ export class DeviceCreateComponent {
   createDevice() {
     this.http.post<any>('https://localhost:7195/api/Device', this.device)
       .subscribe(
-        response => {
-          this.router.navigate(['devices']);
-          console.log('Device created successfully:', response);
+        data => {
+          console.log(data);
+          this.router.navigate(['/devices']);
         },
         error => {
-          this.error = 'Error creating device.'; // Handle and display the error, if any
+          console.log(error);
+          this.error = error.error;
         }
       );
   }

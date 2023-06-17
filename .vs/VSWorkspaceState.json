@@ -3,11 +3,12 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\device-create",
+    "\\src\\app\\device-list",
     "\\src\\app\\device-update",
+    "\\src\\app\\home-page",
     "\\src\\app\\navigation",
     "\\src\\app\\user-register"
   ],
-  "SelectedNode": "\\src\\app\\device-create\\device-create.component.ts",
+  "SelectedNode": "\\src\\app\\home-page\\home-page.component.ts",
   "PreviewInSolutionExplorer": false
 }

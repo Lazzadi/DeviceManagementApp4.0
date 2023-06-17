@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-user-register',
@@ -17,15 +18,18 @@ export class UserRegisterComponent {
 
   userRegister() {
     this.http.post<any>('https://localhost:7195/api/User', this.user)
+    //subscribe to the observable returned by the post() method
       .subscribe(
-        response => {
-          console.log('User registered successfully:', response);
-          this.router.navigate(['devices']);
+        data => {
+          console.log(data);
+          this.router.navigate(['/devices']);
         },
         error => {
-          this.error = 'Error creating User.'; // Handle and display the error, if any
+          console.log(error);
+          this.error = error.error;
         }
-      );
+    );
+
   }
 
 }
